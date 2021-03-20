@@ -1,0 +1,23 @@
+@use "./core.scss";
+@use "./layout.scss";
+@use "./test.scss";
+@use "./themeDefault.scss";
+
+html {
+    @include layout.pb-full-size;
+}
+
+body {
+    @include layout.pb-full-size;
+    @include layout.pb-flex-container-vertical;
+
+    margin: 0px;
+}
+
+.pb-app {
+    @include layout.pb-flex-item-expand;
+    @include layout.pb-flex-container-vertical;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 12pt;
+}
