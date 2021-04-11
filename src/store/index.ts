@@ -1,23 +1,15 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+/* eslint-disable @typescript-eslint/no-empty-interface */
 
+import Vuex from 'vuex'
+import { store } from 'quasar/wrappers';
 import ui from './ui';
 
-Vue.config.devtools = true;
+export interface StateInterface {}
 
-Vue.use(Vuex);
+export default store(({ Vue }) => {
+  Vue.use(Vuex);
 
-/*
- * If not building with SSR mode, you can
- * directly export the Store instantiation;
- *
- * The function below can be async too; either use
- * async/await or return a Promise which resolves
- * with the Store instance.
- */
-
-export default function (/* { ssrContext } */) {
-  const Store = new Vuex.Store({
+  return new Vuex.Store<StateInterface>({
     modules: {
       ui
     },
@@ -26,6 +18,4 @@ export default function (/* { ssrContext } */) {
     // for dev mode and --debug builds only
     strict: !!process.env.DEBUGGING
   });
-
-  return Store;
-}
+});

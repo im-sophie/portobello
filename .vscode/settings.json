@@ -6,6 +6,9 @@
   "vetur.experimental.templateInterpolationService": true,
   "cSpell.words": [
     "Vuex",
-    "cicd"
+    "cicd",
+    "portobello",
+    "katz",
+    "browserslist"
   ]
 }

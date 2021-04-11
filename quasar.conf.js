@@ -26,6 +26,7 @@ module.exports = configure(function (/* ctx */) {
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
       'composition-api',
+      'portobello-service-client'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -80,7 +81,7 @@ module.exports = configure(function (/* ctx */) {
       open: false, // opens browser window automatically
       proxy: {
         '/api': {
-          target: 'http://localhost:8081',
+          target: 'http://localhost:5000',
           changeOrigin: true,
           pathRewrite: {
             '^/api': ''

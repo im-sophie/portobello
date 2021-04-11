@@ -5,7 +5,7 @@
           Profile
         </q-tab-panel>
         <q-tab-panel name="users">
-          Users
+          <pb-settings-users />
         </q-tab-panel>
       </q-tab-panels>
     </q-page>
@@ -13,8 +13,12 @@
 
 <script lang='ts'>
 import { defineComponent } from '@vue/composition-api';
+import SettingsUsers from '../components/SettingsUsers.vue';
 
 export default defineComponent({
-  name: 'Settings'
+  name: 'Settings',
+  components: {
+    'pb-settings-users': SettingsUsers
+  }
 });
 </script>
